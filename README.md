@@ -48,4 +48,4 @@ grep -q "testing" test.html
 ## Get the status code of previous command
 ```linux
 echo $?
-```linux
+```
