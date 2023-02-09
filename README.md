@@ -36,3 +36,6 @@ Test website:
     paths:
       - ./Reports
 ```
+## Job Status codes
+0 - Successfull <br>
+1-225 - Error....Failure
