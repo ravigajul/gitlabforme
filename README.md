@@ -24,3 +24,15 @@ test:
         - echo "Testing"
         - test -f "testproj/info.txt"
 ```
+## Gitlab Runner to use a specific image
+Git lab runner uses default docker images like ruby if not specified.
+```yaml
+Test website:
+  image: node:lts
+  script:
+    - npm install
+    - npx cypress run
+  artifacts:
+    paths:
+      - ./Reports
+```
