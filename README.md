@@ -39,3 +39,13 @@ Test website:
 ## Job Status codes
 0 - Successfull <br>
 1-225 - Error....Failure
+
+## Running grep in silent mode
+```linux
+grep -q "testing" test.html
+```
+
+## Get the status code of previous command
+```linux
+echo $?
+```linux
