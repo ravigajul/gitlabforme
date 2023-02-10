@@ -110,3 +110,17 @@ deploy staging:
   script:
     - <your deployment script>
 ```
+## Global Variables
+User Defined variables can be defined at global level using variables keyword
+```yml
+Variables:
+    - UAT: test.uat.com
+    - PROD: prod.com
+```
+## Configuring Manual Triggers
+Manual triggers can be configured by using when keyword just before the script label
+```yml
+when: manual
+script:
+    - <your script>
+```
