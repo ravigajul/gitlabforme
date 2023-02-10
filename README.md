@@ -80,5 +80,6 @@ test website:
     - npm install
     - npm install -g gatsby-cli
     - gatsby serve &
+    - sleep 3
     - curl "http://localhost:9000" | grep -q "Gatsby"
 ```
