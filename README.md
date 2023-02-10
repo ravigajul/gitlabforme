@@ -135,6 +135,11 @@ build:
     - echo "$VAR_NAME1: $VAR_NAME1"
     - echo "$VAR_NAME2: $VAR_NAME2"
 ```
+In this example, the env.txt file would contain a list of environment variables in the following format:<br>
+```text
+VAR_NAME1=value1
+VAR_NAME2=value2
+```
 ## Configuring Manual Triggers
 Manual triggers can be configured by using when keyword just before the script label
 ```yml
