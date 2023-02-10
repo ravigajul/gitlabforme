@@ -155,4 +155,10 @@ allow_failure: false
 script:
     - <your script>
 ```
-
+## for a production stage to run only on master branch by using only
+```yml
+only:
+   - master
+script:
+   - <your script>
+```
