@@ -51,3 +51,34 @@ echo $?
 ```
 ## Running Jobs in parallel
 When the jobs are created with same stagename, they will be set to run in parallel
+```yml
+stages:
+  - build
+  - test
+
+build website:
+  stage: build
+  image: node
+  script:
+    - npm install
+    - npm install -g gatsby-cli
+    - gatsby build
+  artifacts:
+    paths:
+      - ./public
+
+test artifact:
+  image: alpine
+  stage: test
+  script:
+    - grep -q "Gatsby" ./public/index.html
+
+test website:
+  image: node
+  stage: test
+  script:
+    - npm install
+    - npm install -g gatsby-cli
+    - gatsby serve
+    - curl "http://localhost:9000" | grep -q "Gatsby"
+```
