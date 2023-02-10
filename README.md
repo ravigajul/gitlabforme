@@ -148,3 +148,11 @@ script:
     - <your script>
 ```
 
+## Prevent the subsequent stages to not run of block upon the previous stage failure or if it is waiting for manual trigger
+```yml
+when: manual
+allow_failure: false
+script:
+    - <your script>
+```
+
