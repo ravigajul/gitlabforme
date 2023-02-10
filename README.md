@@ -49,3 +49,5 @@ grep -q "testing" test.html
 ```linux
 echo $?
 ```
+## Running Jobs in parallel
+When the jobs are created with same stagename, they will be set to run in parallel
