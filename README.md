@@ -81,5 +81,6 @@ test website:
     - npm install -g gatsby-cli
     - gatsby serve &
     - sleep 3
-    - curl "http://localhost:9000" | grep -q "Gatsby"
+    - curl "http://localhost:9000" |tac|tac| grep -q "Gatsby"
 ```
+tac is a simple unix program that reads the entire input page and reverses the line order(hence using twice)
