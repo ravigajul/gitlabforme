@@ -99,3 +99,14 @@ cache:
   paths:
     - node_modules/
 ```
+## Environment Variables
+Environment variables play an important role. For instance in the below config, we get to see the two enviroments(CICD->Environments). prod and staging and have the possibility of directly navigating to the urls mentioned
+```yml
+deploy staging: 
+  stage: deploy staging
+  environment:
+    name: staging
+    url: http://test-staging.com
+  script:
+    - <your deployment script>
+```
