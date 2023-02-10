@@ -117,13 +117,6 @@ Variables:
     - UAT: test.uat.com
     - PROD: prod.com
 ```
-## Configuring Manual Triggers
-Manual triggers can be configured by using when keyword just before the script label
-```yml
-when: manual
-script:
-    - <your script>
-```
 Environment variables in GitLab CI/CD pipelines can also be defined outside the .gitlab-ci.yml file. There are several ways to do this:
 1. Project/Group variables: You can define variables at the project or group level in the GitLab web interface. These variables are available to all pipelines in the project or group and can be accessed by using the syntax $VAR_NAME.<br>
 2. Secret variables: You can define secret variables at the project or group level in the GitLab web interface. Secret variables are similar to regular variables, but their values are encrypted and can only be decrypted by GitLab at runtime. They can be accessed by using the syntax $VAR_NAME.<br>
@@ -141,5 +134,12 @@ build:
     - echo "Building with the following environment variables:"
     - echo "$VAR_NAME1: $VAR_NAME1"
     - echo "$VAR_NAME2: $VAR_NAME2"
+```
+## Configuring Manual Triggers
+Manual triggers can be configured by using when keyword just before the script label
+```yml
+when: manual
+script:
+    - <your script>
 ```
 
