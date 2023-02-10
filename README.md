@@ -84,3 +84,18 @@ test website:
     - curl "http://localhost:9000" |tac|tac| grep -q "Gatsby"
 ```
 tac is a simple unix program that reads the entire input page and reverses the line order(hence using twice)
+
+##  Using Caches to speed up the execution of the job
+cache can be cleared by clicking clear cache on the ui. Adding caches ensures that node_modules in this case will not be redownloaded but uses it from cached version
+```yml
+stages:
+  - build
+  - test
+  - deploy
+  - deployment tests
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+```
